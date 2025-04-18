@@ -1,0 +1,23 @@
+cURLs:
+
+curl 'http://172.17.0.2/vulnerabilities/brute/?username=diego&password=diego&Login=Login' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'Accept-Language: es-419,es;q=0.9' \
+  -H 'Connection: keep-alive' \
+  -b 'PHPSESSID=ntjt8g582rg8vth665a68s64r3; security=low' \
+  -H 'Referer: http://172.17.0.2/vulnerabilities/brute/?username=admin&password=1234&Login=Login' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36' \
+  --insecure
+
+
+curl 'http://172.17.0.2/vulnerabilities/brute/?username=smithy&password=password&Login=Login' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'Accept-Language: es-419,es;q=0.9' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Connection: keep-alive' \
+  -b 'PHPSESSID=ntjt8g582rg8vth665a68s64r3; security=low' \
+  -H 'Referer: http://172.17.0.2/vulnerabilities/brute/?username=smithy&password=charley&Login=Login' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36' \
+  --insecure
