@@ -1,0 +1,21 @@
+# Dockerfile para S1/C4 - Ubuntu 22.04 (Revisado)
+FROM ubuntu:22.10
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+
+RUN sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y openssh-client openssh-server && \
+    apt-get clean
+
+# Crear el usuario "prueba" con contraseña "prueba"
+RUN useradd -m -s /bin/bash prueba && \
+    echo "prueba:prueba" | chpasswd
+
+# Crear directorio para SSH y exponer el puerto
+RUN mkdir -p /var/run/sshd
+EXPOSE 22
+
+# Comando para iniciar el servidor SSH en primer plano
+CMD ["/usr/sbin/sshd", "-D"]
